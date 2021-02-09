@@ -14,4 +14,4 @@ spec:
             - path: /
               backend:
                 serviceName: "akscl02eastus2-2d9c"
-                servicePort: 80
+                servicePort: 8080
