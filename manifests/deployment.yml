@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "akscl02eastus2-96f3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "akscl02eastus2-96f3"
+  template:
+    metadata:
+      labels:
+        app: "akscl02eastus2-96f3"
+    spec:
+      containers:
+        - name: "akscl02eastus2-96f3"
+          image: "cdaas.azurecr.io/akscl02eastus2"
+          ports:
+          - containerPort: 8080
