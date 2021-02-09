@@ -1,15 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: "akscl02eastus2-96f3"
-    labels:
-        app: "akscl02eastus2-96f3"
+  name: hello-arc
+  namespace: hello-arc 
 spec:
-    type: ClusterIP
-    ports:
-    - port: 8080
-      targetPort: 8080
-      protocol: TCP
-      name: http
-    selector:
-        app: "akscl02eastus2-96f3"
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: hello-arc
