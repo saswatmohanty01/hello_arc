@@ -1,17 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-    name: "akscl02eastus2-96f3"
-    labels:
-        app: "akscl02eastus2-96f3"
-    annotations:
-        kubernetes.io/ingress.class: addon-http-application-routing
+  name: hello-arc-ingress
+  namespace: hello-arc
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-    rules:
-        - host: hello-arc-akscl02eastus2-96f3.69731cda9f1848e8922c.eastus2.aksapp.io
-          http:
-            paths:
-            - path: /
-              backend:
-                serviceName: "akscl02eastus2-96f3"
-                servicePort: 8080
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: hello-arc
+          servicePort: 8080
