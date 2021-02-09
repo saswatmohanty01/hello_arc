@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-arc
-        image: demoday.azurecr.io/hello-arc
+        image: demoday.azurecr.io/helloarc
         ports:
         - containerPort: 8080
         env:
