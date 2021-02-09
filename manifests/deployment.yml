@@ -16,4 +16,4 @@ spec:
         - name: "akscl02eastus2-2d9c"
           image: "cdaas.azurecr.io/akscl02eastus2"
           ports:
-          - containerPort: 80
+          - containerPort: 8080
