@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'helloarc-aks_cl_02_eastus2''helloarc-aks_cl_01_eastus''helloarc-aks_cl_03_westeurope'
+    environment: 'helloarc-aks_cl_02_eastus2'
     strategy:
       runOnce:
         deploy:
