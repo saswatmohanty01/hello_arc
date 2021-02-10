@@ -45,7 +45,7 @@ stages:
       artifact: manifests
 
 - stage: Deploy
-  displayName: Deploy eastus2
+  displayName: Deploy aks
   dependsOn: Build
 
   jobs:
@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'helloarc-aks_cl_02_eastus2'
+    environment: 'helloarc-aks_cl_02_eastus2''helloarc-aks_cl_01_eastus''helloarc-aks_cl_03_westeurope'
     strategy:
       runOnce:
         deploy:
